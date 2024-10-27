@@ -1,0 +1,43 @@
+{
+  "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v1/data-sync.json",
+  "verbose": false,
+  "patterns": {
+    "patternName": {
+      "source": {
+        "database": "",
+        "host": "",
+        "port": 5432,
+        "user": "",
+        "password": ""
+      },
+      "target": {
+        "database": "",
+        "host": "",
+        "port": 5432,
+        "user": "",
+        "password": ""
+      },
+      "diff": {
+        "format": true,
+        "tables": [
+          {
+            "name": "abc",
+            "orderBy": "id, code"
+          },
+          {
+            "name": "def",
+            "where": "id = '1'",
+            "orderBy": "name"
+          }
+        ]
+      },
+      "migrate": {
+        "noInsert": false,
+        "noUpdate": false,
+        "noDelete": false,
+        "noRowAffected": "warn",
+        "multipleRowAffected": "throw"
+      }
+    }
+  }
+}
